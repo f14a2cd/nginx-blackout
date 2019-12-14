@@ -20,3 +20,31 @@ location / {
 ```
 
 3) Check that it works with the current date :)
+
+
+
+Or for only HTML
+
+1) Add the HTML-file from this repo (english or russian version) somewhere to the server (e.g. `/var/www/nginx-blackout/index.html`)
+2) Edit your index.html to be like this:
+
+```index.html
+
+<html>
+	<head>
+		<script>
+		var now = new Date();
+		var Dec015_2019_start = new Date(2019,11,14,18,18,0,0);
+		var Dec015_2019_stop = new Date(2019,11,14,18,19,0,0);
+			if( now > Dec015_2019_start && now < Dec015_2019_stop) {
+				window.location.href = '/nginx-blackout/index.html';
+			}
+		</script>
+	</head>
+	<body>
+	...
+	</body>
+</html>
+
+```
+
