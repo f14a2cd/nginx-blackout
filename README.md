@@ -34,8 +34,8 @@ Or for only HTML
 	<head>
 		<script>
 		var now = new Date();
-		var Dec015_2019_start = new Date(2019,11,14,18,18,0,0);
-		var Dec015_2019_stop = new Date(2019,11,14,18,19,0,0);
+		var Dec015_2019_start = new Date(2019,11,15,12,0,0,0);
+		var Dec015_2019_stop = new Date(2019,11,15,12,30,0,0);
 			if( now > Dec015_2019_start && now < Dec015_2019_stop) {
 				window.location.href = '/nginx-blackout/index.html';
 			}
