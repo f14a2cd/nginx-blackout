@@ -13,7 +13,7 @@ location /nginx-blackout {
 
 location / {
     if ($time_iso8601 ~ ^2019-12-15T09:[0-2][0-9]:[0-9][0-9] ) {
-            return 302 /nginx-blackout;
+    	return 302 /nginx-blackout;
     }
     # ... usual location config
 }
